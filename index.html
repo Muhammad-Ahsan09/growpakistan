@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROW PAKISTAN | Empowering Youth Through Skills & Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#24BD27',
+                            dark: '#1b8e1d',
+                            light: '#edf9ed',
+                        },
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .active-tab {
+            background-color: #24BD27 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white font-extrabold text-xl tracking-wider">
+                        G</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-slate-900">GROW<span
+                            class="text-brand">PAKISTAN</span></span>
+                </div>
+
+                <nav class="hidden xl:flex space-x-6 text-[15px] font-medium text-slate-600">
+                    <a href="#home" class="hover:text-brand transition-colors">Home</a>
+                    <a href="#about" class="hover:text-brand transition-colors">About Us</a>
+                    <a href="#courses" class="hover:text-brand transition-colors">Courses</a>
+                    <a href="#events" class="hover:text-brand transition-colors">Events</a>
+                    <a href="#achievements" class="hover:text-brand transition-colors">Our Work</a>
+                    <a href="#team" class="hover:text-brand transition-colors">Team</a>
+                    <a href="#internships" class="hover:text-brand transition-colors">Internships</a>
+                    <a href="#blog" class="hover:text-brand transition-colors">Blog</a>
+                    <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden xl:flex items-center">
+                    <a href="#contact"
+                        class="bg-brand hover:bg-brand-dark text-white px-5 py-2.5 rounded-xl font-medium transition-all transform hover:-translate-y-0.5 shadow-md shadow-brand/20">Join
+                        Us</a>
+                </div>
+
+                <div class="xl:hidden flex items-center">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="text-slate-700 hover:text-brand focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden xl:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-6 space-y-2 shadow-xl absolute w-full left-0">
+            <a href="#home" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">About
+                Us</a>
+            <a href="#courses" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Courses</a>
+            <a href="#events" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Events</a>
+            <a href="#achievements" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Our
+                Work</a>
+            <a href="#team" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Team</a>
+            <a href="#internships" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Internships</a>
+            <a href="#blog" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Blog</a>
+            <a href="#contact" onclick="toggleMobileMenu()"
+                class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand/10 hover:text-brand">Contact</a>
+            <div class="pt-4 px-3">
+                <a href="#contact" onclick="toggleMobileMenu()"
+                    class="block text-center bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-medium">Join
+                    GROW PAKISTAN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="h-20"></div>
+
+    <section id="home"
+        class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white pt-12 pb-24 lg:pt-20 lg:pb-32">
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(#24BD27_1px,transparent_1px)] [background-size:24px_24px]">
+        </div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand border border-brand/20 text-sm font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span> Youth Empowerment Platform
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Empowering Pakistan Through <span class="text-brand">Skills</span>, Technology & <span
+                            class="text-brand">Innovation</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Building Future Leaders through Technology, Digital Skills, Entrepreneurship, Leadership &
+                        Career Development.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#contact"
+                            class="bg-brand hover:bg-brand-dark text-white text-center px-8 py-4 rounded-xl font-semibold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand/20">Join
+                            GROW PAKISTAN</a>
+                        <a href="#courses"
+                            class="bg-white/10 hover:bg-white/20 text-white text-center px-8 py-4 rounded-xl font-semibold transition-all border border-white/10 backdrop-blur-sm">Explore
+                            Courses</a>
+                        <a href="#contact"
+                            class="border border-brand text-brand hover:bg-brand hover:text-white text-center px-8 py-4 rounded-xl font-semibold transition-all">Become
+                            Partner</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div
+                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
+                            <i class="fa-solid fa-laptop-code"></i></div>
+                        <h4 class="font-bold text-lg mb-1">Professional Training</h4>
+                        <p class="text-sm text-slate-400">Industry-Level Programs</p>
+                    </div>
+                    <div
+                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
+                            <i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4 class="font-bold text-lg mb-1">Expert Workshops</h4>
+                        <p class="text-sm text-slate-400">Practical modern toolsets</p>
+                    </div>
+                    <div
+                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
+                            <i class="fa-solid fa-briefcase"></i></div>
+                        <h4 class="font-bold text-lg mb-1">Internships</h4>
+                        <p class="text-sm text-slate-400">Direct Industry Pipelines</p>
+                    </div>
+                    <div
+                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
+                            <i class="fa-solid fa-network-wired"></i></div>
+                        <h4 class="font-bold text-lg mb-1">Mega Tech Events</h4>
+                        <p class="text-sm text-slate-400">Massive Scale Networking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-sm font-medium text-slate-300">
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Professional Training Programs</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Industry-Level Workshops</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Internship Opportunities</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Certifications</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Youth Empowerment</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
+                    Mega Tech Events</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Insert this block directly underneath the Hero section (<section id="home">) and right before the About section (<section id="about">) -->
+
+    <!-- FOUNDER & CEO SPOTLIGHT SECTION -->
+    <section class="relative bg-white pt-20 pb-12 overflow-hidden border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-8 lg:p-12 shadow-xl border border-white/5 relative overflow-hidden">
+                <!-- Decorative Accent Background Ring -->
+                <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-brand/10 rounded-full blur-3xl"></div>
+
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+                    <!-- CEO Image Placeholder/Frame (3:4 Professional Portrait Aspect Ratio) -->
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div
+                            class="relative group w-full max-w-[280px] aspect-[3/4] bg-slate-800 rounded-2xl border border-white/10 overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
+                            <!-- Simulated Professional Portrait Frame -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10">
+                            </div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 z-0">
+                                <i class="fa-solid fa-user-tie text-5xl text-brand/30 mb-2"></i>
+                                <span class="text-xs uppercase tracking-widest font-semibold text-slate-400">CEO
+                                    Portrait Placer</span>
+                            </div>
+
+                            <!-- Floating Verification Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-20 bg-brand text-white px-3 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider shadow-md">
+                                Founder & CEO
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CEO Message / Professional Profile -->
+                    <div class="lg:col-span-8 text-center lg:text-left space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand block">Leadership
+                                Message</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                                From the Desk of the CEO
+                            </h3>
+                            <div class="w-12 h-1 bg-brand rounded-full mx-auto lg:mx-0 mt-2"></div>
+                        </div>
+
+                        <!-- Authentic Quote -->
+                        <blockquote
+                            class="text-slate-300 text-sm sm:text-base font-light italic leading-relaxed relative">
+                            <i class="fa-solid fa-quote-left text-brand/20 text-4xl absolute -top-4 -left-4 z-0"></i>
+                            <span class="relative z-10">
+                                "Our mandate at GROW PAKISTAN is simple yet absolute: to eliminate the widening gap
+                                between obsolete academic learning and real commercial tech skills. We aren't just
+                                building an institute; we are cultivating Pakistan's next economic engine by
+                                transforming passionate youth into globally competitive technology leaders,
+                                entrepreneurs, and digital innovators."
+                            </span>
+                        </blockquote>
+
+                        <!-- CEO Identity & Social Links -->
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/10">
+                            <div>
+                                <h4 class="font-bold text-lg text-white tracking-tight">Founder & CEO Name</h4>
+                                <p class="text-xs text-slate-400 font-medium mt-0.5">GROW PAKISTAN Ecosystem Platform
+                                </p>
+                            </div>
+
+                            <!-- Connect Button & Profile Link -->
+                            <div class="flex items-center justify-center lg:justify-start gap-3">
+                                <a href="#"
+                                    class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2 rounded-xl text-xs font-semibold transition-colors">
+                                    <i class="fa-brands fa-linkedin text-brand text-sm"></i> Connect on LinkedIn
+                                </a>
+                                <a href="#contact"
+                                    class="bg-brand hover:bg-brand-dark text-white px-4 py-2 rounded-xl text-xs font-semibold transition-colors shadow-md shadow-brand/10">
+                                    Direct Inquiry
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Who We Are</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">About GROW PAKISTAN
+                </p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Our Story</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            GROW PAKISTAN is a youth-focused skill development and innovation platform committed to
+                            empowering students through education, technology, leadership, entrepreneurship,
+                            internships, and professional growth opportunities.
+                        </p>
+                    </div>
+                    <hr class="border-slate-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2"><i
+                                class="fa-solid fa-bullseye text-brand"></i> Mission</h3>
+                        <p class="text-slate-600 text-sm sm:text-base">To empower Pakistan’s youth with practical
+                            skills, digital education, leadership, and innovation.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2"><i
+                                class="fa-solid fa-eye text-brand"></i> Vision</h3>
+                        <p class="text-slate-600 text-sm sm:text-base">To create a skilled, innovative, and empowered
+                            Pakistan.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900">Why Choose GROW PAKISTAN?</h3>
+                    <p class="text-slate-600">We offer comprehensive ecosystems tailored to push your capabilities past
+                        traditional boundaries.</p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-graduationcap"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Industry-Level Learning</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Curriculums mapped with absolute current field
+                                    standards.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-gears"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Practical Training</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Zero dry theories, purely implementation and
+                                    build setups.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-house-laptop"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Physical + Online Classes</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Flexible learning options via mixed learning
+                                    modes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-id-card-clip"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Internship Opportunities</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Get guaranteed pathways inside real modern
+                                    companies.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Professional Mentorship</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Direct handholding from industry leaders and
+                                    experts.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
+                                <i class="fa-solid fa-certificate"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Certificates & Networking</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">Verifiable credentials combined with massive
+                                    mega events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Up-Skill Now</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Featured Courses
+                </p>
+                <p class="mt-4 text-slate-600">High-yield practical training tracks designed to transition students into
+                    core working assets.</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-bullhorn"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Digital Marketing</h3>
+                        <p class="text-sm text-slate-500 mb-4">SEO, Facebook Ads, Branding, Content Marketing</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 2 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Affordable / Installment available</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-palette"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Graphic Designing</h3>
+                        <p class="text-sm text-slate-500 mb-4">Canva, Photoshop, Branding Design, Social Media Posts</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 2 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">E-Commerce</h3>
+                        <p class="text-sm text-slate-500 mb-4">Daraz, Shopify, Amazon Basics</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 2.5 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-globe"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Freelancing</h3>
+                        <p class="text-sm text-slate-500 mb-4">Fiverr, Upwork, Client Hunting</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 1 Month</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-code"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Web Development</h3>
+                        <p class="text-sm text-slate-500 mb-4">Website Designing & Development</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 3 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-brain"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">AI & Technology</h3>
+                        <p class="text-sm text-slate-500 mb-4">Artificial Intelligence Tools & Future Skills</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 2 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-users-viewfinder"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Leadership Development</h3>
+                        <p class="text-sm text-slate-500 mb-4">Public Speaking, Communication, Event Management</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 1.5 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Entrepreneurship</h3>
+                        <p class="text-sm text-slate-500 mb-4">Business Building & Startup Mindset</p>
+                        <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand"></i>
+                                Duration: 2 Months</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-receipt text-brand"></i> Fees:
+                                Contact For Details</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand"></i>
+                                Physical + Online Classes</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-award text-brand"></i>
+                                Certificate Provided</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50/50 border-t border-slate-100">
+                        <a href="#contact"
+                            class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-medium py-2.5 rounded-xl text-sm transition-colors">Enroll
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Connecting Ecosystems</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Mega Tech Events &
+                    Sessions</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-5 border border-slate-100 rounded-xl bg-slate-50/50">
+                            <span class="text-brand font-bold text-xl block mb-1">01</span>
+                            <h4 class="font-bold text-slate-900 text-lg">Mega Tech Events</h4>
+                            <p class="text-sm text-slate-500 mt-1">Massive youth Gatherings exploring tech innovations
+                                across provinces.</p>
+                        </div>
+                        <div class="p-5 border border-slate-100 rounded-xl bg-slate-50/50">
+                            <span class="text-brand font-bold text-xl block mb-1">02</span>
+                            <h4 class="font-bold text-slate-900 text-lg">Seminars & Workshops</h4>
+                            <p class="text-sm text-slate-500 mt-1">Targeted physical deep-dives focused on single
+                                technological subsets.</p>
+                        </div>
+                        <div class="p-5 border border-slate-100 rounded-xl bg-slate-50/50">
+                            <span class="text-brand font-bold text-xl block mb-1">03</span>
+                            <h4 class="font-bold text-slate-900 text-lg">MOU Signing Ceremonies</h4>
+                            <p class="text-sm text-slate-500 mt-1">Expanding professional ecosystems via legitimate
+                                industry networks.</p>
+                        </div>
+                        <div class="p-5 border border-slate-100 rounded-xl bg-slate-50/50">
+                            <span class="text-brand font-bold text-xl block mb-1">04</span>
+                            <h4 class="font-bold text-slate-900 text-lg">Leadership & Meetups</h4>
+                            <p class="text-sm text-slate-500 mt-1">Direct student meetups promoting public speaking and
+                                collaboration.</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div class="bg-slate-900 px-6 py-4 flex items-center justify-between text-white">
+                            <h4 class="font-bold text-sm tracking-wide uppercase"><i
+                                    class="fa-regular fa-image text-brand mr-2"></i> Event Gallery Preview</h4>
+                            <span class="text-xs bg-brand text-white px-2.5 py-1 rounded font-semibold">Live Feed</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 p-3 bg-slate-100">
+                            <div
+                                class="aspect-video bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs font-medium relative overflow-hidden group">
+                                <div
+                                    class="absolute inset-0 bg-brand/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">
+                                    Tech Summit</div>
+                                <span class="group-hover:opacity-0">Mega Event</span>
+                            </div>
+                            <div
+                                class="aspect-video bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs font-medium relative overflow-hidden group">
+                                <div
+                                    class="absolute inset-0 bg-brand/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">
+                                    MOU Done</div>
+                                <span class="group-hover:opacity-0">Signing</span>
+                            </div>
+                            <div
+                                class="aspect-video bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs font-medium relative overflow-hidden group">
+                                <div
+                                    class="absolute inset-0 bg-brand/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">
+                                    Workshop</div>
+                                <span class="group-hover:opacity-0">Student Meetup</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 border border-white/10 shadow-xl relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand/20 rounded-full blur-2xl"></div>
+                    <h3 class="text-xl font-bold mb-2">Register for Next Event</h3>
+                    <p class="text-slate-400 text-sm mb-6">Secure your seat inside upcoming national tech sessions and
+                        seminars.</p>
+
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Full Name</label>
+                            <input type="text"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand text-white"
+                                placeholder="e.g. Asim Khan">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Email
+                                Address</label>
+                            <input type="email"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand text-white"
+                                placeholder="name@domain.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Select Event
+                                Type</label>
+                            <select
+                                class="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand text-white">
+                                <option>Mega Tech Event</option>
+                                <option>Skill Seminar</option>
+                                <option>Leadership Bootcamp</option>
+                            </select>
+                        </div>
+                        <button
+                            class="w-full bg-brand hover:bg-brand-dark text-white py-3.5 rounded-xl font-bold text-sm mt-2 shadow-lg shadow-brand/20 transition-all">Submit
+                            Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-5 bg-[radial-gradient(#24BD27_1px,transparent_1px)] [background-size:20px_20px]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Proven Tracks</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">What We Have Achieved</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 text-center border-b border-white/10 pb-16">
+                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand">5000+</span>
+                    <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Students Impacted</span>
+                </div>
+                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand">50+</span>
+                    <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Events Conducted</span>
+                </div>
+                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand">100+</span>
+                    <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Partnerships</span>
+                </div>
+                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand">1000+</span>
+                    <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Certificates Issued</span>
+                </div>
+                <div class="p-6 bg-white/5 rounded-2xl border border-white/10 col-span-2 lg:col-span-1">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand">20+</span>
+                    <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Professional Trainers</span>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <h3 class="text-xl font-bold text-center mb-10 tracking-wide uppercase text-slate-300">Core Verticals &
+                    Ecosystem Services</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-graduationcap"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Skill Development</h4>
+                            <p class="text-sm text-slate-400 mt-1">Structured workflows transforming basic knowledge
+                                into commercial skill frameworks.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-microchip"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Tech Training</h4>
+                            <p class="text-sm text-slate-400 mt-1">High-end computing tracks, development assets, and
+                                continuous technological builds.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-user-shield"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Youth Leadership</h4>
+                            <p class="text-sm text-slate-400 mt-1">Instilling key organizational structure management
+                                and core presentation values.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-briefcase"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Internship Programs</h4>
+                            <p class="text-sm text-slate-400 mt-1">Direct corporate pipeline access setups containing
+                                absolute real practical exposure.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Event Management</h4>
+                            <p class="text-sm text-slate-400 mt-1">Executing wide national level physical tracks and
+                                technology mega summits.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                        <div class="text-brand text-2xl"><i class="fa-solid fa-users"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Community Development</h4>
+                            <p class="text-sm text-slate-400 mt-1">Connecting remote youth layers into singular
+                                structured digital communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Behind The Platform</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Leadership & Team
+                </p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                    <div
+                        class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
+                        <i class="fa-solid fa-user-tie"></i></div>
+                    <h4 class="font-bold text-lg text-slate-900">Executive Leader</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">CEO & Founder</p>
+                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                    <div
+                        class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
+                        <i class="fa-solid fa-user-gear"></i></div>
+                    <h4 class="font-bold text-lg text-slate-900">Director Board</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Management Division</p>
+                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                    <div
+                        class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
+                        <i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h4 class="font-bold text-lg text-slate-900">Lead Instructor</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Training Team</p>
+                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                    <div
+                        class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
+                        <i class="fa-solid fa-camera"></i></div>
+                    <h4 class="font-bold text-lg text-slate-900">Media & Ops Head</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Operations Team</p>
+                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-slate-500 mt-8">Backed by an elite layer of operational staff, event
+                managers, and dedicated volunteers nationwide.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Impact Statements</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">What Students Say
+                    About Us</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "GROW PAKISTAN changed my career direction. I learned practical digital skills and gained
+                            confidence."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+                        <div
+                            class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                            <i class="fa-solid fa-user"></i></div>
+                        <div>
+                            <h5 class="font-bold text-sm text-slate-900">Kamran Shah</h5>
+                            <span class="text-xs text-slate-400">Digital Marketing Alumni</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "The focus on actual commercial tools rather than outdated textbooks made it extremely easy
+                            to start freelancing directly inside international ecosystems."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+                        <div
+                            class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                            <i class="fa-solid fa-user"></i></div>
+                        <div>
+                            <h5 class="font-bold text-sm text-slate-900">Ayesha Bibi</h5>
+                            <span class="text-xs text-slate-400">Graphic Design Graduate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "Attending their Mega Tech Event completely re-wired my perception of technological trends
+                            inside Pakistan. Exceptional platform for modern networks."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+                        <div
+                            class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                            <i class="fa-solid fa-user"></i></div>
+                        <div>
+                            <h5 class="font-bold text-sm text-slate-900">Zubair Khan</h5>
+                            <span class="text-xs text-slate-400">Tech Summit Attendee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Visual Highlights</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Professional
+                    Gallery</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterGallery('all', this)"
+                    class="active-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all">All
+                    media</button>
+                <button onclick="filterGallery('events', this)"
+                    class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all">Events</button>
+                <button onclick="filterGallery('workshops', this)"
+                    class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all">Workshops</button>
+                <button onclick="filterGallery('courses', this)"
+                    class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all">Courses</button>
+                <button onclick="filterGallery('mou', this)"
+                    class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all">MOU
+                    Signings</button>
+                <button onclick="filterGallery('videos', this)"
+                    class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-all"><i
+                        class="fa-solid fa-play text-brand mr-1"></i> Video Gallery</button>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="gallery-grid">
+                <div data-category="events"
+                    class="gallery-item aspect-video bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    <span>[Event Photo Placement]</span>
+                </div>
+                <div data-category="workshops"
+                    class="gallery-item aspect-video bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    <span>[Workshop Photo Placement]</span>
+                </div>
+                <div data-category="courses"
+                    class="gallery-item aspect-video bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    <span>[Class Session Placement]</span>
+                </div>
+                <div data-category="mou"
+                    class="gallery-item aspect-video bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    <span>[MOU Ceremony Placement]</span>
+                </div>
+                <div data-category="videos"
+                    class="gallery-item aspect-video bg-slate-900 border border-slate-800 rounded-xl flex flex-col items-center justify-center font-bold text-white relative overflow-hidden group">
+                    <i class="fa-solid fa-circle-play text-3xl text-brand mb-2"></i>
+                    <span class="text-xs tracking-wider uppercase text-slate-400">Video Feed Stream</span>
+                </div>
+                <div data-category="events"
+                    class="gallery-item aspect-video bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    <span>[Student Summit Placement]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- PARTNERSHIPS & COLLABORATIONS SECTION (Minimal Clean Logos) -->
+   <section class="py-12 bg-slate-50 border-t border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h4 class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-10">
+            Our Trusted Partnerships & Collaborations
+        </h4>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 items-center justify-center">
+            <!-- Logo 1 -->
+            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                <img src="./logo2.jpeg" alt="Partner Logo" class="max-w-full max-h-full object-contain">
+            </div>
+
+            <!-- Logo 2 -->
+            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                <img src="./mehmar-enhanced-logo.jpg" alt="Mehmar Logo" class="max-w-full max-h-full object-contain">
+            </div>
+
+            <!-- Logo 3 -->
+            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                <img src="./digital-asprie-logo.png" alt="Digital Aspire Logo" class="max-w-full max-h-full object-contain">
+            </div>
+
+            <!-- Logo 4 (Text Fallback)
+            <div class="flex items-center justify-center h-16 text-slate-400 hover:text-slate-700 transition-colors duration-300 cursor-pointer gap-2 group">
+                <i class="fa-solid fa-network-wired text-lg group-hover:text-brand transition-colors duration-300"></i>
+                <span class="font-bold tracking-tight text-base">Media Partners</span>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+    <section id="internships" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span
+                        class="text-xs font-bold text-brand uppercase tracking-wider bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20">Corporate
+                        Exposure</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">GROW PAKISTAN
+                        Internship Program</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Bridge the massive gap between academic theories and practical on-floor execution. Apply inside
+                        our tailored operational wings to build actual metrics under master mentors.
+                    </p>
+
+                    <div class="space-y-3">
+                        <div
+                            class="flex items-center gap-3 font-semibold text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <i class="fa-solid fa-circle-nodes text-brand"></i> Marketing Internship
+                        </div>
+                        <div
+                            class="flex items-center gap-3 font-semibold text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <i class="fa-solid fa-bezier-curve text-brand"></i> Graphic Design Internship
+                        </div>
+                        <div
+                            class="flex items-center gap-3 font-semibold text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <i class="fa-solid fa-users-gear text-brand"></i> Event Management Internship
+                        </div>
+                        <div
+                            class="flex items-center gap-3 font-semibold text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <i class="fa-solid fa-user-shield text-brand"></i> Leadership & Social Media Tracks
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-1">Apply For Internship</h3>
+                    <p class="text-sm text-slate-500 mb-6">Positions are highly competitive. Submit immediate profiles
+                        below.</p>
+
+                    <form class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Full
+                                    Name</label>
+                                <input type="text"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"
+                                    placeholder="Asim">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">WhatsApp /
+                                    Phone</label>
+                                <input type="tel"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"
+                                    placeholder="03xx xxxxxxx">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Select
+                                Department</label>
+                            <select
+                                class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand">
+                                <option>Marketing Internship</option>
+                                <option>Graphic Design Internship</option>
+                                <option>Event Management Internship</option>
+                                <option>Social Media Management</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Brief Profile
+                                summary / LinkedIn link</label>
+                            <textarea
+                                class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand h-24"
+                                placeholder="Mention qualifications or past links..."></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3.5 rounded-xl text-sm transition-colors shadow-md shadow-brand/10">Submit
+                            Application Form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Information Desk</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Latest Updates &
+                    Insights</p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article
+                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Upcoming Events</span>
+                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a
+                                href="#">Preparations Begin For Next National Scale Mega Tech Summit</a></h3>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            Ecosystem structures are assembling across key major cities to anchor next wave of youth
+                            tech summits.
+                        </p>
+                    </div>
+                    <div
+                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>June 2026</span>
+                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Success Stories</span>
+                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a href="#">How
+                                5 Alumni Members Hit Freelancing Milestones In 60 Days</a></h3>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            Discover exact pipeline strategies executed by our digital graphic and marketing students
+                            inside global platforms.
+                        </p>
+                    </div>
+                    <div
+                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>May 2026</span>
+                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Career Tips</span>
+                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a
+                                href="#">Navigating Modern AI Tools for High-Ticket Client Acquisition</a></h3>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            Simple structural modifications inside traditional outreach frameworks that fetch better
+                            freelancing returns.
+                        </p>
+                    </div>
+                    <div
+                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span>May 2026</span>
+                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Get In Touch</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Connect With Our Team
+                </p>
+                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Contact Information</h3>
+                        <p class="text-slate-500 text-sm sm:text-base">Have explicit questions? Drop direct messages or
+                            visit headquarters anytime.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm sm:text-base">
+                        <div class="flex gap-4 items-center">
+                            <div
+                                class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span class="block text-xs uppercase font-bold text-slate-400">Call Phone</span>
+                                <span class="font-semibold text-slate-800">+92 300 0000000</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div
+                                class="w-11 h-11 bg-emerald-100 text-emerald-600 font-bold rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-lg"></i></div>
+                            <div>
+                                <span class="block text-xs uppercase font-bold text-slate-400">WhatsApp Desk</span>
+                                <span class="font-semibold text-slate-800">+92 300 0000000</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div
+                                class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="block text-xs uppercase font-bold text-slate-400">Email Query</span>
+                                <span class="font-semibold text-slate-800">info@growpakistan.pk</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div
+                                class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="block text-xs uppercase font-bold text-slate-400">Office Address</span>
+                                <span class="font-semibold text-slate-800">Tech Ecosystem Center, Peshawar, KP,
+                                    Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-4">
+                        <span class="block text-xs uppercase font-bold text-slate-400 tracking-wider">Follow Ecosystem
+                            Socials</span>
+                        <div class="flex gap-2">
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-100 hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-colors text-slate-600"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-100 hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-colors text-slate-600"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-100 hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-colors text-slate-600"><i
+                                    class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-100 hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-colors text-slate-600"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-100 hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-colors text-slate-600"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 w-full">
+                    <form class="bg-slate-50 border border-slate-200/60 rounded-3xl p-6 sm:p-8 space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Full
+                                    Name</label>
+                                <input type="text"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"
+                                    placeholder="Asim Khan">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Phone
+                                    Number</label>
+                                <input type="tel"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"
+                                    placeholder="03xx xxxxxxx">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Email
+                                Address</label>
+                            <input type="email"
+                                class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"
+                                placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Your
+                                Message</label>
+                            <textarea
+                                class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand h-32"
+                                placeholder="Write detailed instructions or queries..."></textarea>
+                        </div>
+                        <button
+                            class="bg-brand hover:bg-brand-dark text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-md shadow-brand/10">Send
+                            Message</button>
+                    </form>
+
+                    <div
+                        class="w-full h-48 bg-slate-200 rounded-2xl border border-slate-300 flex items-center justify-center font-bold text-slate-400 relative overflow-hidden">
+                        <span>[Google Maps Location Embedded Here]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-white/5 relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-8 text-sm border-b border-white/5 pb-12">
+
+            <div class="col-span-2 md:col-span-4 lg:col-span-4 space-y-4">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-9 h-9 bg-brand rounded-lg flex items-center justify-center text-white font-extrabold text-lg">
+                        G</div>
+                    <span class="font-extrabold text-xl tracking-tight text-white">GROW<span
+                            class="text-brand">PAKISTAN</span></span>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+                    Empowering Pakistan Through Skills & Innovation. Building core leaders through technology execution
+                    tracks.
+                </p>
+            </div>
+
+            <div class="col-span-1 md:col-span-2 lg:col-span-2 space-y-3">
+                <h5 class="font-bold text-white uppercase tracking-wider text-xs">Quick Links</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#home" class="hover:text-brand transition-colors">Home Base</a></li>
+                    <li><a href="#about" class="hover:text-brand transition-colors">About Story</a></li>
+                    <li><a href="#team" class="hover:text-brand transition-colors">Our Team</a></li>
+                    <li><a href="#internships" class="hover:text-brand transition-colors">Internships</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-1 md:col-span-2 lg:col-span-2 space-y-3">
+                <h5 class="font-bold text-white uppercase tracking-wider text-xs">Top Tracks</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#courses" class="hover:text-brand transition-colors">Digital Marketing</a></li>
+                    <li><a href="#courses" class="hover:text-brand transition-colors">Graphic Design</a></li>
+                    <li><a href="#courses" class="hover:text-brand transition-colors">Web Development</a></li>
+                    <li><a href="#courses" class="hover:text-brand transition-colors">AI & Future Tech</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 md:col-span-4 lg:col-span-4 space-y-3">
+                <h5 class="font-bold text-white uppercase tracking-wider text-xs">Legal & Operations</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#events" class="hover:text-brand transition-colors">Mega Tech Events Desk</a></li>
+                    <li><a href="#contact" class="hover:text-brand transition-colors">Contact Support Unit</a></li>
+                    <li><a href="#" class="hover:text-brand transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-brand transition-colors">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+            <p>&copy; 2026 GROW PAKISTAN. All Rights Reserved.</p>
+            <p class="text-slate-500">Empowering Pakistan Through Skills & Innovation.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark text-2xl";
+            } else {
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars text-2xl";
+            }
+        }
+
+        function filterGallery(category, buttonEl) {
+            // Manage Active Classes
+            const buttons = buttonEl.parentElement.children;
+            for (let btn of buttons) {
+                btn.classList.remove('active-tab');
+            }
+            buttonEl.classList.add('active-tab');
+
+            // Manage gallery visibility
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'flex';
+                } else {
+                    if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

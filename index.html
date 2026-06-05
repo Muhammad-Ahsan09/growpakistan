@@ -30,11 +30,79 @@
                 }
             }
         }
+
+
     </script>
     <style>
         .active-tab {
             background-color: #24BD27 !important;
             color: white !important;
+        }
+
+        /* ==========================================================================
+       PREMIUM EXTENDED-DISTANCE DIRECTIONAL SCROLL REVEAL ENGINE
+       ========================================================================== */
+
+        /* 1. Global Core Transition settings for all hidden elements */
+        .reveal-up,
+        .reveal-down,
+        .reveal-left,
+        .reveal-right,
+        .reveal-scale {
+            opacity: 0 !important;
+            will-change: transform, opacity;
+            /* Adjusted to 1.1s to account for the longer distance, keeping it smooth */
+            transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 1.1s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        /* 2. Extended Starting States (Increased travel distance from 40px to 90px) */
+        .reveal-up {
+            transform: translateY(90px) !important;
+        }
+
+        .reveal-down {
+            transform: translateY(-90px) !important;
+        }
+
+        .reveal-left {
+            transform: translateX(-90px) !important;
+        }
+
+        .reveal-right {
+            transform: translateX(90px) !important;
+        }
+
+        /* Scale variation remains compact to prevent layout distortion */
+        .reveal-scale {
+            transform: scale(0.88) !important;
+        }
+
+        /* 3. The Active/Visible State (Resets everything perfectly to its layout target) */
+        .reveal-visible {
+            opacity: 1 !important;
+            transform: translateY(0) translateX(0) scale(1) !important;
+        }
+
+        /* 4. Sequential Stagger Delay Utilities */
+        .delay-100 {
+            transition-delay: 100ms !important;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms !important;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms !important;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms !important;
+        }
+
+        .delay-500 {
+            transition-delay: 500ms !important;
         }
     </style>
 </head>
@@ -111,26 +179,37 @@
 
     <div class="h-20"></div>
 
-    <section id="home"
-        class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white pt-12 pb-24 lg:pt-20 lg:pb-32">
-        <div
-            class="absolute inset-0 opacity-10 bg-[radial-gradient(#24BD27_1px,transparent_1px)] [background-size:24px_24px]">
+    <section id="home" class="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 bg-slate-950 text-white">
+
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
+            style="background-image: url('./images/background/header-background.jpeg');">
         </div>
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand/20 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand/10 rounded-full blur-3xl"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/75 via-slate-900/50 to-blue-950/75 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-transparent to-transparent z-0"></div>
+
+        <div
+            class="absolute inset-0 opacity-20 bg-[radial-gradient(#24BD27_1px,transparent_1px)] [background-size:24px_24px] z-0">
+        </div>
+
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand/20 rounded-full blur-3xl z-0"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand/10 rounded-full blur-3xl z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
+
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
                     <span
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand border border-brand/20 text-sm font-semibold tracking-wide uppercase">
                         <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span> Youth Empowerment Platform
                     </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    <h1
+                        class="reveal-left text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight [text-shadow:_0_2px_10px_rgba(0,0,0,0.8)]">
                         Empowering Pakistan Through <span class="text-brand">Skills</span>, Technology & <span
                             class="text-brand">Innovation</span>
                     </h1>
-                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    <p
+                        class="reveal-scale text-lg sm:text-xl text-white max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
                         Building Future Leaders through Technology, Digital Skills, Entrepreneurship, Leadership &
                         Career Development.
                     </p>
@@ -149,42 +228,46 @@
 
                 <div class="lg:col-span-5 grid grid-cols-2 gap-4">
                     <div
-                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
+                        class="bg-slate-950/60 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
-                            <i class="fa-solid fa-laptop-code"></i></div>
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
                         <h4 class="font-bold text-lg mb-1">Professional Training</h4>
-                        <p class="text-sm text-slate-400">Industry-Level Programs</p>
+                        <p class="text-sm text-slate-300">Industry-Level Programs</p>
                     </div>
                     <div
-                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
+                        class="bg-slate-950/60 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
-                            <i class="fa-solid fa-chalkboard-user"></i></div>
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
                         <h4 class="font-bold text-lg mb-1">Expert Workshops</h4>
-                        <p class="text-sm text-slate-400">Practical modern toolsets</p>
+                        <p class="text-sm text-slate-300">Practical modern toolsets</p>
                     </div>
                     <div
-                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
+                        class="bg-slate-950/60 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
-                            <i class="fa-solid fa-briefcase"></i></div>
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
                         <h4 class="font-bold text-lg mb-1">Internships</h4>
-                        <p class="text-sm text-slate-400">Direct Industry Pipelines</p>
+                        <p class="text-sm text-slate-300">Direct Industry Pipelines</p>
                     </div>
                     <div
-                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
+                        class="bg-slate-950/60 p-6 rounded-2xl border border-white/10 backdrop-blur-md transform hover:scale-105 transition-all mt-4 lg:mt-8">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-4">
-                            <i class="fa-solid fa-network-wired"></i></div>
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
                         <h4 class="font-bold text-lg mb-1">Mega Tech Events</h4>
-                        <p class="text-sm text-slate-400">Massive Scale Networking</p>
+                        <p class="text-sm text-slate-300">Massive Scale Networking</p>
                     </div>
                 </div>
             </div>
 
             <div
-                class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-sm font-medium text-slate-300">
+                class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-sm font-medium text-white [text-shadow:_0_1px_5px_rgba(0,0,0,0.5)]">
                 <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
                     Professional Training Programs</div>
                 <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-brand"></i>
@@ -202,10 +285,8 @@
     </section>
 
 
-    <!-- Insert this block directly underneath the Hero section (<section id="home">) and right before the About section (<section id="about">) -->
-
     <!-- FOUNDER & CEO SPOTLIGHT SECTION -->
-    <section class="relative bg-white pt-20 pb-12 overflow-hidden border-b border-slate-100">
+    <section class="reveal-left relative bg-white pt-20 pb-12 overflow-hidden border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div
                 class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-8 lg:p-12 shadow-xl border border-white/5 relative overflow-hidden">
@@ -215,24 +296,21 @@
                 <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     <!-- CEO Image Placeholder/Frame (3:4 Professional Portrait Aspect Ratio) -->
+                    <!-- CEO Image Container (Perfected 3:4 Professional Portrait Fitting) -->
                     <div class="lg:col-span-4 flex justify-center">
                         <div
                             class="relative group w-full max-w-[280px] aspect-[3/4] bg-slate-800 rounded-2xl border border-white/10 overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
-                            <!-- Simulated Professional Portrait Frame -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10">
-                            </div>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 z-0">
-                                <i class="fa-solid fa-user-tie text-5xl text-brand/30 mb-2"></i>
-                                <span class="text-xs uppercase tracking-widest font-semibold text-slate-400">CEO
-                                    Portrait Placer</span>
-                            </div>
+
+                            <!-- Updated Image Tag: Forced to fill out the container height seamlessly -->
+                            <img src="./images/photos/CEO.jpeg" alt="Founder & CEO"
+                                class="w-full h-full object-cover object-top block">
 
                             <!-- Floating Verification Badge -->
                             <div
                                 class="absolute top-4 left-4 z-20 bg-brand text-white px-3 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider shadow-md">
                                 Founder & CEO
                             </div>
+
                         </div>
                     </div>
 
@@ -264,7 +342,7 @@
                         <div
                             class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/10">
                             <div>
-                                <h4 class="font-bold text-lg text-white tracking-tight">Founder & CEO Name</h4>
+                                <h4 class="font-bold text-lg text-white tracking-tight">Mr. Abdullah Muneer</h4>
                                 <p class="text-xs text-slate-400 font-medium mt-0.5">GROW PAKISTAN Ecosystem Platform
                                 </p>
                             </div>
@@ -288,9 +366,84 @@
         </div>
     </section>
 
+    <!-- DIRECTOR SPOTLIGHT SECTION -->
+    <section class="reveal-right relative bg-white pb-20 overflow-hidden border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-8 lg:p-12 shadow-xl border border-white/5 relative overflow-hidden">
+                <!-- Decorative Accent Background Ring (Positioned Left for Balance) -->
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-brand/10 rounded-full blur-3xl"></div>
+
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+                    <!-- Director Message / Professional Profile (Swapped Order for Desktop Layout Balance) -->
+                    <div class="lg:col-span-8 order-2 lg:order-1 text-center lg:text-left space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand block">Strategic Vision</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                                Director's Perspective
+                            </h3>
+                            <div class="w-12 h-1 bg-brand rounded-full mx-auto lg:mx-0 mt-2"></div>
+                        </div>
+
+                        <!-- Authentic Quote -->
+                        <blockquote
+                            class="text-slate-300 text-sm sm:text-base font-light italic leading-relaxed relative">
+                            <i class="fa-solid fa-quote-left text-brand/20 text-4xl absolute -top-4 -left-4 z-0"></i>
+                            <span class="relative z-10">
+                                "Empowerment without direction is potential underutilized. Our core focus is to design robust, future-proof frameworks that match youth talent directly with international demands. By deploying cutting-edge curriculums and immersive practical setups, we are ensuring that every individual who steps into our ecosystem leaves as a highly competent professional."
+                            </span>
+                        </blockquote>
+
+                        <!-- Director Identity & Social Links -->
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/10">
+                            <div>
+                                <h4 class="font-bold text-lg text-white tracking-tight">Mr. Mirza Muneer Akhtar</h4>
+                                <p class="text-xs text-slate-400 font-medium mt-0.5">Director of Strategy & Operations, GROW PAKISTAN
+                                </p>
+                            </div>
+
+                            <!-- Connect Button & Profile Link -->
+                            <div class="flex items-center justify-center lg:justify-start gap-3">
+                                <a href="#"
+                                    class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2 rounded-xl text-xs font-semibold transition-colors">
+                                    <i class="fa-brands fa-linkedin text-brand text-sm"></i> Connect on LinkedIn
+                                </a>
+                                <a href="#about"
+                                    class="bg-brand/10 hover:bg-brand/20 text-brand px-4 py-2 rounded-xl text-xs font-semibold transition-colors border border-brand/20">
+                                    Our Strategy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Director Image Container (Perfected 3:4 Professional Portrait Fitting) -->
+                    <div class="lg:col-span-4 order-1 lg:order-2 flex justify-center">
+                        <div
+                            class="relative group w-full max-w-[280px] aspect-[3/4] bg-slate-800 rounded-2xl border border-white/10 overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
+
+                            <!-- Image Tag: Framed perfectly to fit container height -->
+                            <img src="./images/photos/director.jpeg" alt="Director"
+                                class="w-full h-full object-cover object-top block">
+
+                            <!-- Floating Verification Badge -->
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-brand text-white px-3 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider shadow-md">
+                                Director
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="reveal-scale text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Who We Are</h2>
                 <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">About GROW PAKISTAN
                 </p>
@@ -298,7 +451,8 @@
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-5 bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+                <div
+                    class="reveal-left lg:col-span-5 bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
                     <div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Our Story</h3>
                         <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -322,7 +476,7 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 space-y-6">
+                <div class="reveal-right lg:col-span-7 space-y-6">
                     <h3 class="text-2xl font-bold text-slate-900">Why Choose GROW PAKISTAN?</h3>
                     <p class="text-slate-600">We offer comprehensive ecosystems tailored to push your capabilities past
                         traditional boundaries.</p>
@@ -330,7 +484,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-graduationcap"></i></div>
+                                <i class="fa-solid fa-graduationcap"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Industry-Level Learning</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Curriculums mapped with absolute current field
@@ -340,7 +495,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-gears"></i></div>
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Practical Training</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Zero dry theories, purely implementation and
@@ -350,7 +506,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-house-laptop"></i></div>
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Physical + Online Classes</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Flexible learning options via mixed learning
@@ -360,7 +517,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-id-card-clip"></i></div>
+                                <i class="fa-solid fa-id-card-clip"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Internship Opportunities</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Get guaranteed pathways inside real modern
@@ -370,7 +528,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-user-tie"></i></div>
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Professional Mentorship</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Direct handholding from industry leaders and
@@ -380,7 +539,8 @@
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
                             <div
                                 class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold shrink-0">
-                                <i class="fa-solid fa-certificate"></i></div>
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-slate-900">Certificates & Networking</h4>
                                 <p class="text-sm text-slate-500 mt-0.5">Verifiable credentials combined with massive
@@ -395,7 +555,7 @@
 
     <section id="courses" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="reveal-down text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Up-Skill Now</h2>
                 <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Featured Courses
                 </p>
@@ -406,11 +566,12 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-left bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-bullhorn"></i></div>
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Digital Marketing</h3>
                         <p class="text-sm text-slate-500 mb-4">SEO, Facebook Ads, Branding, Content Marketing</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -432,11 +593,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-left bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-palette"></i></div>
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Graphic Designing</h3>
                         <p class="text-sm text-slate-500 mb-4">Canva, Photoshop, Branding Design, Social Media Posts</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -458,11 +620,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-right bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-cart-shopping"></i></div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">E-Commerce</h3>
                         <p class="text-sm text-slate-500 mb-4">Daraz, Shopify, Amazon Basics</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -484,11 +647,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-right bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-globe"></i></div>
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Freelancing</h3>
                         <p class="text-sm text-slate-500 mb-4">Fiverr, Upwork, Client Hunting</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -510,11 +674,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-left bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-code"></i></div>
+                            <i class="fa-solid fa-code"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Web Development</h3>
                         <p class="text-sm text-slate-500 mb-4">Website Designing & Development</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -536,11 +701,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-left bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-brain"></i></div>
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">AI & Technology</h3>
                         <p class="text-sm text-slate-500 mb-4">Artificial Intelligence Tools & Future Skills</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -562,11 +728,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-right bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-users-viewfinder"></i></div>
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Leadership Development</h3>
                         <p class="text-sm text-slate-500 mb-4">Public Speaking, Communication, Event Management</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -588,11 +755,12 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    class="reveal-right bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div class="p-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 font-bold">
-                            <i class="fa-solid fa-lightbulb"></i></div>
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
                         <h3 class="font-bold text-xl text-slate-900 mb-2">Entrepreneurship</h3>
                         <p class="text-sm text-slate-500 mb-4">Business Building & Startup Mindset</p>
                         <div class="space-y-2 border-t border-slate-100 pt-4 text-xs font-semibold text-slate-600">
@@ -618,7 +786,7 @@
 
     <section id="events" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="reveal-scale text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Connecting Ecosystems</h2>
                 <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Mega Tech Events &
                     Sessions</p>
@@ -626,7 +794,7 @@
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-7 space-y-6">
+                <div class="reveal-left lg:col-span-7 space-y-6">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div class="p-5 border border-slate-100 rounded-xl bg-slate-50/50">
                             <span class="text-brand font-bold text-xl block mb-1">01</span>
@@ -687,7 +855,7 @@
                 </div>
 
                 <div
-                    class="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 border border-white/10 shadow-xl relative overflow-hidden">
+                    class="reveal-right lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 border border-white/10 shadow-xl relative overflow-hidden">
                     <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand/20 rounded-full blur-2xl"></div>
                     <h3 class="text-xl font-bold mb-2">Register for Next Event</h3>
                     <p class="text-slate-400 text-sm mb-6">Secure your seat inside upcoming national tech sessions and
@@ -732,40 +900,41 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="reveal-up text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Proven Tracks</h2>
                 <p class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">What We Have Achieved</p>
                 <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 text-center border-b border-white/10 pb-16">
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div class="reveal-left p-6 bg-white/5 rounded-2xl border border-white/10">
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand">5000+</span>
                     <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Students Impacted</span>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div class="reveal-left p-6 bg-white/5 rounded-2xl border border-white/10">
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand">50+</span>
                     <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Events Conducted</span>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div class="reveal-scale p-6 bg-white/5 rounded-2xl border border-white/10">
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand">100+</span>
                     <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Partnerships</span>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div class="reveal-right p-6 bg-white/5 rounded-2xl border border-white/10">
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand">1000+</span>
                     <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Certificates Issued</span>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10 col-span-2 lg:col-span-1">
+                <div class="reveal-right p-6 bg-white/5 rounded-2xl border border-white/10 col-span-2 lg:col-span-1">
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand">20+</span>
                     <span class="block text-xs sm:text-sm font-medium text-slate-400 mt-2">Professional Trainers</span>
                 </div>
             </div>
 
             <div class="mt-16">
-                <h3 class="text-xl font-bold text-center mb-10 tracking-wide uppercase text-slate-300">Core Verticals &
+                <h3 class="reveal-left text-xl font-bold text-center mb-10 tracking-wide uppercase text-slate-300">Core
+                    Verticals &
                     Ecosystem Services</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-left flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-graduationcap"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Skill Development</h4>
@@ -773,7 +942,7 @@
                                 into commercial skill frameworks.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-up flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-microchip"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Tech Training</h4>
@@ -781,7 +950,7 @@
                                 continuous technological builds.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-right flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-user-shield"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Youth Leadership</h4>
@@ -789,7 +958,7 @@
                                 and core presentation values.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-left flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-briefcase"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Internship Programs</h4>
@@ -797,7 +966,7 @@
                                 absolute real practical exposure.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-up flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-calendar-check"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Event Management</h4>
@@ -805,7 +974,7 @@
                                 technology mega summits.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="reveal-right flex gap-4 p-6 bg-white/5 rounded-2xl border border-white/5">
                         <div class="text-brand text-2xl"><i class="fa-solid fa-users"></i></div>
                         <div>
                             <h4 class="font-bold text-lg">Community Development</h4>
@@ -831,7 +1000,8 @@
                 <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
                     <div
                         class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
-                        <i class="fa-solid fa-user-tie"></i></div>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
                     <h4 class="font-bold text-lg text-slate-900">Executive Leader</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">CEO & Founder</p>
                     <div class="flex justify-center gap-3 mt-4 text-slate-400">
@@ -843,7 +1013,8 @@
                 <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
                     <div
                         class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
-                        <i class="fa-solid fa-user-gear"></i></div>
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
                     <h4 class="font-bold text-lg text-slate-900">Director Board</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Management Division</p>
                     <div class="flex justify-center gap-3 mt-4 text-slate-400">
@@ -855,7 +1026,8 @@
                 <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
                     <div
                         class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
-                        <i class="fa-solid fa-chalkboard-user"></i></div>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
                     <h4 class="font-bold text-lg text-slate-900">Lead Instructor</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Training Team</p>
                     <div class="flex justify-center gap-3 mt-4 text-slate-400">
@@ -867,7 +1039,8 @@
                 <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
                     <div
                         class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 font-bold text-2xl">
-                        <i class="fa-solid fa-camera"></i></div>
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
                     <h4 class="font-bold text-lg text-slate-900">Media & Ops Head</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Operations Team</p>
                     <div class="flex justify-center gap-3 mt-4 text-slate-400">
@@ -907,7 +1080,8 @@
                     <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
                         <div
                             class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
-                            <i class="fa-solid fa-user"></i></div>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div>
                             <h5 class="font-bold text-sm text-slate-900">Kamran Shah</h5>
                             <span class="text-xs text-slate-400">Digital Marketing Alumni</span>
@@ -930,7 +1104,8 @@
                     <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
                         <div
                             class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
-                            <i class="fa-solid fa-user"></i></div>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div>
                             <h5 class="font-bold text-sm text-slate-900">Ayesha Bibi</h5>
                             <span class="text-xs text-slate-400">Graphic Design Graduate</span>
@@ -953,7 +1128,8 @@
                     <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
                         <div
                             class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
-                            <i class="fa-solid fa-user"></i></div>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div>
                             <h5 class="font-bold text-sm text-slate-900">Zubair Khan</h5>
                             <span class="text-xs text-slate-400">Tech Summit Attendee</span>
@@ -1021,37 +1197,42 @@
         </div>
     </section>
 
-   <!-- PARTNERSHIPS & COLLABORATIONS SECTION (Minimal Clean Logos) -->
-   <section class="py-12 bg-slate-50 border-t border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h4 class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-10">
-            Our Trusted Partnerships & Collaborations
-        </h4>
+    <!-- PARTNERSHIPS & COLLABORATIONS SECTION (Minimal Clean Logos) -->
+    <section class="py-12 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h4 class="reveal-hidden text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-10">
+                Our Trusted Partnerships & Collaborations
+            </h4>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 items-center justify-center">
-            <!-- Logo 1 -->
-            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
-                <img src="./logo2.jpeg" alt="Partner Logo" class="max-w-full max-h-full object-contain">
-            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 items-center justify-center">
+                <!-- Logo 1 -->
+                <div
+                    class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./images/logo2.jpeg" alt="Partner Logo" class="max-w-full max-h-full object-contain">
+                </div>
 
-            <!-- Logo 2 -->
-            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
-                <img src="./mehmar-enhanced-logo.jpg" alt="Mehmar Logo" class="max-w-full max-h-full object-contain">
-            </div>
+                <!-- Logo 2 -->
+                <div
+                    class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./images/mehmar-enhanced-logo.jpg" alt="Mehmar Logo"
+                        class="max-w-full max-h-full object-contain">
+                </div>
 
-            <!-- Logo 3 -->
-            <div class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
-                <img src="./digital-asprie-logo.png" alt="Digital Aspire Logo" class="max-w-full max-h-full object-contain">
-            </div>
+                <!-- Logo 3 -->
+                <div
+                    class="flex items-center justify-center h-16 filter grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./images/digital-asprie-logo.png" alt="Digital Aspire Logo"
+                        class="max-w-full max-h-full object-contain">
+                </div>
 
-            <!-- Logo 4 (Text Fallback)
+                <!-- Logo 4 (Text Fallback)
             <div class="flex items-center justify-center h-16 text-slate-400 hover:text-slate-700 transition-colors duration-300 cursor-pointer gap-2 group">
                 <i class="fa-solid fa-network-wired text-lg group-hover:text-brand transition-colors duration-300"></i>
                 <span class="font-bold tracking-tight text-base">Media Partners</span>
             </div> -->
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="internships" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1224,7 +1405,8 @@
                         <div class="flex gap-4 items-center">
                             <div
                                 class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-phone"></i></div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
                             <div>
                                 <span class="block text-xs uppercase font-bold text-slate-400">Call Phone</span>
                                 <span class="font-semibold text-slate-800">+92 300 0000000</span>
@@ -1233,7 +1415,8 @@
                         <div class="flex gap-4 items-center">
                             <div
                                 class="w-11 h-11 bg-emerald-100 text-emerald-600 font-bold rounded-xl flex items-center justify-center shrink-0">
-                                <i class="fa-brands fa-whatsapp text-lg"></i></div>
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </div>
                             <div>
                                 <span class="block text-xs uppercase font-bold text-slate-400">WhatsApp Desk</span>
                                 <span class="font-semibold text-slate-800">+92 300 0000000</span>
@@ -1242,7 +1425,8 @@
                         <div class="flex gap-4 items-center">
                             <div
                                 class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-envelope"></i></div>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
                             <div>
                                 <span class="block text-xs uppercase font-bold text-slate-400">Email Query</span>
                                 <span class="font-semibold text-slate-800">info@growpakistan.pk</span>
@@ -1251,7 +1435,8 @@
                         <div class="flex gap-4 items-center">
                             <div
                                 class="w-11 h-11 bg-brand/10 text-brand font-bold rounded-xl flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-location-dot"></i></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
                             <div>
                                 <span class="block text-xs uppercase font-bold text-slate-400">Office Address</span>
                                 <span class="font-semibold text-slate-800">Tech Ecosystem Center, Peshawar, KP,
@@ -1386,6 +1571,7 @@
     </footer>
 
     <script>
+        // MOBILE MENU TOGGLE
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
@@ -1398,29 +1584,49 @@
             }
         }
 
+        // PREMIUM GALLERY FILTERING (Tailwind Grid Safe)
         function filterGallery(category, buttonEl) {
-            // Manage Active Classes
             const buttons = buttonEl.parentElement.children;
-            for (let btn of buttons) {
-                btn.classList.remove('active-tab');
-            }
+            for (let btn of buttons) { btn.classList.remove('active-tab'); }
             buttonEl.classList.add('active-tab');
 
-            // Manage gallery visibility
             const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'flex';
+                const matchesCategory = category === 'all' || item.getAttribute('data-category') === category;
+                if (matchesCategory) {
+                    item.classList.remove('hidden');
+                    setTimeout(() => { item.classList.add('reveal-visible'); }, 50);
                 } else {
-                    if (item.getAttribute('data-category') === category) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    item.classList.add('hidden');
+                    item.classList.remove('reveal-visible');
                 }
             });
         }
+
+        // MULTI-DIRECTION INTERSECTION OBSERVER
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.50 // Triggers when 12% of the element hits the screen
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("reveal-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Select and observe all variations of our design tokens
+            const animationSelectors = ".reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale";
+            document.querySelectorAll(animationSelectors).forEach(el => observer.observe(el));
+        });
     </script>
+
+
 </body>
 
 </html>

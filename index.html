@@ -871,175 +871,165 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Behind The Platform</h2>
-                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Leadership & Team
-                </p>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Leadership & Team</p>
                 <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
             </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+    
+            <!-- Added id="team-grid" here -->
+            <div id="team-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. Executive Leader (Abdullah Muneer) -->
+                <a href="./profile.html?member=ceo" class="team-card reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
                         <img src="./images/photos/CEO.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Executive Leader</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Abdullah Muneer</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        <!-- <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                        <a href="#" class="hover:text-brand"><i class="fa-brands fa-facebook text-lg"></i></a> -->
-                    </div>
-                </div>
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 2. Chairman (Mr. Mirza Muneer Akhtar) -->
+                <a href="./profile.html?member=chairman" class="team-card reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/chairman.jpeg" alt="Chairman"
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/chairman.jpeg" alt="Chairman" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Chairman</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Mr. Mirza Muneer Akhtar</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 3. President (Saif ur Rahman) -->
+                <a href="./profile.html?member=president" class="team-card reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
                         <img src="./images/photos/president.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">President</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Saif ur Rahman</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 4. Vice President (Habibullah khan) -->
+                <a href="./profile.html?member=vp" class="team-card reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/vice president.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/vice president.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Vice president</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Habibullah khan</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+    
+                <!-- 5. Board Director (Hiding onwards by default via JS) -->
+                <a href="./profile.html?member=boardDirector" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/operations-director.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/Board director.jpeg" alt="" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Board Director</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Muhammad Ahmad</p>
+                </a>
+            
+                <!-- 6. Operations Director (Muhammad Fahad) -->
+                <a href="./profile.html?member=ops" class="team-card hidden reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
+                    <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
+                        <img src="./images/photos/operations-director.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Operations Director</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Muhammad Fahad</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 7. General Director (Abdul Rafay) -->
+                <a href="./profile.html?member=gen" class="team-card hidden reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/general-director.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/general-director.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">General Director</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Abdul Rafay</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 8. Department Leader (Muhammad Awais) -->
+                <a href="./profile.html?member=dept" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/communications-director.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
-                    </div>
-                    <h4 class="font-bold text-lg text-slate-900">Director of Communications</h4>
-                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Anousha Gul</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
-                    <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/department-leader.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/department-leader.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Department Leader</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Muhammad Awais</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 9. Project Manager (Laiba Javaid) -->
+                <a href="./profile.html?member=pm" class="team-card hidden reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/project-manager.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/project-manager.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Project Manager</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Laiba Javaid</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 10. Campus Leader (Eman Haider) -->
+                <a href="./profile.html?member=campus1" class="team-card hidden reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/campus-leader.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/campus-leader.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Campus Leader</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Eman Haider</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 11. Campus Leader (Saim Sabir) -->
+                <a href="./profile.html?member=campus2" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/campus-leader2.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/campus-leader2.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Campus Leader</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Saim Sabir</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+            
+                <!-- 12. Campus Ambassador (Iqra Ilyas) -->
+                <a href="./profile.html?member=amb1" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/campusambassador1.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/campusambassador1.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Campus Ambassador</h4>
                     <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Iqra Ilyas</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
-                    </div>
-                </div>
-
-                <div class="reveal-left bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm">
+                </a>
+    
+                <a href="./profile.html?member=campus3" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
                     <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
-                        <img src="./images/photos/campus-ambassador2.jpeg" alt=""
-                            class="w-full h-full object-cover object-top">
+                        <img src="./images/photos/campus-leader3.jpeg" alt="" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Campus Leader</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Saifullah</p>
+                </a>
+    
+                <a href="./profile.html?member=campus4" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
+                    <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
+                        <img src="./images/photos/laiba-campus-leader.jpeg" alt="" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Campus Leader</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Laiba Habib</p>
+                </a>
+    
+                <a href="./profile.html?member=amb2" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
+                    <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
+                        <img src="./images/photos/ureen-campus-ambassador.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Campus Ambassador</h4>
-                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Syed Ali Tariq</p>
-                    <div class="flex justify-center gap-3 mt-4 text-slate-400">
-                        
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Ureen Jamil</p>
+                </a>
+    
+                <a href="./profile.html?member=gennDir" class="team-card hidden reveal-right bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center shadow-sm block hover:border-brand/30 transition-all">
+                    <div class="w-full aspect-square bg-slate-200 rounded-xl overflow-hidden mb-4 shadow-inner">
+                        <img src="./images/photos/fatima-director-of-communication.jpeg" alt="" class="w-full h-full object-cover object-top">
                     </div>
-                </div>
+                    <h4 class="font-bold text-lg text-slate-900">General Director</h4>
+                    <p class="text-xs font-semibold text-brand tracking-wider uppercase mt-1">Fatima Khalid</p>
+                </a>
+    
             </div>
-
-            <p class="text-center text-sm text-slate-500 mt-8">Backed by an elite layer of operational staff, event
-                managers, and dedicated volunteers nationwide.</p>
+    
+            <!-- NEW: "See More" Button Container -->
+            <div class="text-center mt-12">
+                <button id="see-more-btn" class="inline-flex items-center justify-center px-6 py-3 border border-slate-200 rounded-full text-sm font-semibold text-slate-700 bg-white shadow-sm hover:bg-slate-50 hover:text-slate-900 focus:outline-none transition-all cursor-pointer">
+                    See More Team Members
+                    <svg class="ml-2 h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+    
+            <p class="text-center text-sm text-slate-500 mt-8">Backed by an elite layer of operational staff, event managers, and dedicated volunteers nationwide.</p>
         </div>
     </section>
 
@@ -1054,7 +1044,7 @@
 
             <div class="grid md:grid-cols-3 gap-6">
 
-                <div class="reveal-down bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1078,7 +1068,7 @@
                     </div>
                 </div>
 
-                <div class="reveal-up bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1102,7 +1092,7 @@
                     </div>
                 </div>
 
-                <div class="reveal-left bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1128,7 +1118,7 @@
 
                 
 
-                <div class="reveal-down bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1152,7 +1142,7 @@
                     </div>
                 </div>
 
-                <div class="reveal-left bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1178,7 +1168,7 @@
 
                 
 
-                <div class="reveal-up bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                <div class="reveal-scale bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex text-amber-400 gap-1 mb-4">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -1235,7 +1225,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="gallery-grid">
                 <div data-category="events"
-                    class="reveal-left gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    class="reveal-up gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
                     <!-- <span>[Event Photo Placement]</span> -->
                     <img src="./images/events/mou-signing.jpeg" alt="" class="aspect-square">
                 </div>
@@ -1250,7 +1240,7 @@
                     
                 </div> -->
                 <div data-category="mou"
-                    class="reveal-down gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    class="reveal-up gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
                     <img src="./images/mous/mou-1.jpeg" alt="">
                 </div>
                 <!-- <div data-category="videos"
@@ -1259,7 +1249,7 @@
                     <span class="text-xs tracking-wider uppercase text-slate-400">Video Feed Stream</span>
                 </div> -->
                 <div data-category="events"
-                    class="reveal-left gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    class="reveal-up gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
                     <img src="./images/events/event-3.jpeg" alt="">
                 </div>
 
@@ -1270,12 +1260,12 @@
                 </div>
 
                 <div data-category="mou"
-                    class="reveal-right gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    class="reveal-up gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
                     <img src="./images/mous/mou-2.jpeg" alt="">
                 </div>
 
                 <div data-category="mou"
-                    class="reveal-right gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
+                    class="reveal-up gallery-item aspect-square bg-slate-200 border border-slate-300/60 rounded-xl flex items-center justify-center font-bold text-slate-400 relative overflow-hidden group">
                     <img src="./images/events/khanpur-tex-event.jpeg" alt="">
                 </div>
 
@@ -1427,72 +1417,6 @@
         </div>
     </section>
 
-    <!-- <section id="blog" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-base text-brand font-semibold tracking-wide uppercase">Information Desk</h2>
-                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Latest Updates &
-                    Insights</p>
-                <div class="w-16 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article
-                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Upcoming Events</span>
-                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a
-                                href="#">Preparations Begin For Next National Scale Mega Tech Summit</a></h3>
-                        <p class="text-slate-500 text-sm line-clamp-3">
-                            Ecosystem structures are assembling across key major cities to anchor next wave of youth
-                            tech summits.
-                        </p>
-                    </div>
-                    <div
-                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
-                        <span>June 2026</span>
-                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
-                    </div>
-                </article>
-
-                <article
-                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Success Stories</span>
-                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a href="#">How
-                                5 Alumni Members Hit Freelancing Milestones In 60 Days</a></h3>
-                        <p class="text-slate-500 text-sm line-clamp-3">
-                            Discover exact pipeline strategies executed by our digital graphic and marketing students
-                            inside global platforms.
-                        </p>
-                    </div>
-                    <div
-                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
-                        <span>May 2026</span>
-                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
-                    </div>
-                </article>
-
-                <article
-                    class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand">Career Tips</span>
-                        <h3 class="font-bold text-xl text-slate-900 hover:text-brand transition-colors"><a
-                                href="#">Navigating Modern AI Tools for High-Ticket Client Acquisition</a></h3>
-                        <p class="text-slate-500 text-sm line-clamp-3">
-                            Simple structural modifications inside traditional outreach frameworks that fetch better
-                            freelancing returns.
-                        </p>
-                    </div>
-                    <div
-                        class="px-6 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between text-xs text-slate-400 font-medium">
-                        <span>May 2026</span>
-                        <a href="#" class="text-brand font-semibold hover:underline">Read Post →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section> -->
 
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1696,7 +1620,7 @@
         </div>
     </footer>
 
-    <script src="index.js">
+    <script src="./scripts/index.js">
         
     </script>
     

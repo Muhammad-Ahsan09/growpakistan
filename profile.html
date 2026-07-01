@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile - GROW PAKISTAN</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#24BD27',
+                            dark: '#1b8e1d',
+                            light: '#edf9ed',
+                        },
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-600 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Nav Space Holder -->
+    <header class="bg-white border-b border-slate-100 py-4 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="../../index.html" class="flex items-center gap-2 text-slate-900 font-extrabold text-xl tracking-tight">
+                <img src="./images/logos/growpakistan logo.jpeg" alt="" width="60" class="rounded-2xl">
+                    <span class="font-extrabold text-2xl tracking-tight text-slate-900">GROW<span
+                            class="text-brand">PAKISTAN</span></span>
+            </a>
+            <a href="../../index.html#team" class="text-sm font-medium text-slate-500 hover:text-brand transition-colors flex items-center gap-1">
+                <i class="fa-solid fa-arrow-left"></i> Back to Team
+            </a>
+        </div>
+    </header>
+
+    <!-- Quick Switcher Panel (For Demo & Easy Implementation) -->
+    <div class="bg-slate-900 text-white py-3 px-4 shadow-inner">
+        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
+            <span class="font-medium text-slate-400"><i class="fa-solid fa-users text-brand mr-1"></i> Viewing Profile For:</span>
+            <select id="memberSelector" onchange="switchProfile(this.value)" class="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-white font-semibold focus:outline-none focus:border-brand w-full sm:w-auto">
+                <option value="ceo">Abdullah Muneer (Executive Leader)</option>
+                <option value="chairman">Mr. Mirza Muneer Akhtar (Chairman)</option>
+                <option value="president">Saif ur Rahman (President)</option>
+                <option value="vp">Habibullah khan (Vice president)</option>
+                <option value="boardDirector">Muhammad Ahmad (Board Director)</option>
+                <option value="ops">Muhammad Fahad (Operations Director)</option>
+                <option value="gen">Abdul Rafay (General Director)</option>
+                <!-- <option value="comm">Anousha Gul (Director of Communications)</option> -->
+                <option value="dept">Muhammad Awais (Department Leader)</option>
+                <option value="pm">Laiba Javaid (Project Manager)</option>
+                <option value="campus1">Eman Haider (Campus Leader)</option>
+                <option value="campus2">Saim Sabir (Campus Leader)</option>
+                <option value="amb1">Iqra Ilyas (Campus Ambassador)</option>
+                <option value="campus3">Saifullah (Campus Leader)</option>
+                <option value="campus4">Laiba Habib (Campus Leader)</option>
+                <option value="amb2">Ureen Jamil (Campus Ambassador)</option>
+                <option value="gennDir">Fatima Khalid (General Director)</option>
+                <!-- <option value="amb3">Shazia Sattar (Campus Ambassador)</option> -->
+                <!-- <option value="amb2">Syed Ali Tariq (Campus Ambassador)</option> -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Profile Section -->
+    <main class=" reveal-scale py-12 sm:py-16 flex-grow" id="main">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Profile Card -->
+            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+                <div class="grid md:grid-cols-12 gap-0">
+                    
+                    <!-- Left Column: Photo & Quick Socials -->
+                    <div class="col-span-5 bg-slate-50/50 p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-100 text-center">
+                        <div class="w-full max-w-[260px] aspect-square bg-slate-200 rounded-2xl overflow-hidden shadow-md mb-6 ring-4 ring-white">
+                            <img id="profilePhoto" src="../../images/photos/CEO.jpeg" alt="Team Member" class="w-full h-full object-cover object-top">
+                        </div>
+                        
+                        <h2 id="profileName" class="text-2xl font-extrabold text-slate-900 tracking-tight">Abdullah Muneer</h2>
+                        <p id="profileTitle" class="text-xs font-bold text-brand tracking-wider uppercase mt-1.5 bg-brand/10 px-3 py-1 rounded-full">Executive Leader</p>
+                        
+                        <div class="w-12 h-1 bg-slate-200 mx-auto my-6 rounded-full"></div>
+                        
+                        <!-- Social Links -->
+                        <div class="flex justify-center gap-4 text-slate-400">
+                            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center hover:text-brand hover:border-brand/40 transition-all"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center hover:text-brand hover:border-brand/40 transition-all"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center hover:text-brand hover:border-brand/40 transition-all"><i class="fa-solid fa-envelope text-lg"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Detailed Overview -->
+                    <div class="md:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-2">Biography & Focus</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4">About the Leader</h3>
+                            <p id="profileBio" class="text-slate-600 text-sm leading-relaxed mb-8">
+                                As the Executive Leader of GROW PAKISTAN, Abdullah focuses on scaling high-impact digital initiatives, cultivating strategic institutional partnerships, and driving technical excellence across our distributed educational ecosystems.
+                            </p>
+                            
+                            <hr class="border-slate-100 my-6">
+                            
+                            <!-- Focus Areas / Skills -->
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Primary Core Responsibilities</h4>
+                            <div id="profileTags" class="flex flex-wrap gap-2">
+                                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200/60">Strategic Vision</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200/60">E-commerce Scalability</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200/60">Operations Scaling</span>
+                            </div>
+                        </div>
+
+                        <!-- Core Value Banner -->
+                        <!-- <div class="mt-8 pt-6 border-t border-slate-100 flex items-start gap-3">
+                            <div class="text-brand text-xl mt-0.5"><i class="fa-solid fa-quote-left"></i></div>
+                            <p id="profileQuote" class="text-xs text-slate-500 italic font-medium leading-relaxed">
+                                "Our mission is simple: to transform passive learners into active creators and business operators across Pakistan."
+                            </p>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Simple Matching Footer -->
+    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400">
+        <p>&copy; 2026 GROW PAKISTAN. Empowering Youth through Practical Digital Skills.</p>
+    </footer>
+
+    <!-- JavaScript Engine to handle 100% of your staff cleanly inside one file -->
+    <script src="./scripts/profile.js">
+        
+    </script>
+</body>
+</html>
